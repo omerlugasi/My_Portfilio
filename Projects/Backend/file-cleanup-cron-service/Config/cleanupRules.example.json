@@ -1,0 +1,42 @@
+{
+  "schedule": "0 20 * * *",
+  "folders": {
+    "main": "./data/incoming",
+    "backup": "./data/backup"
+  },
+  "incomingRules": [
+    {
+      "name": "delete-old-xml",
+      "type": "age",
+      "extensions": ["xml"],
+      "olderThanDays": 1,
+      "ageBy": "birthtime",
+      "action": "delete",
+      "errorLogMessage": "Failed deleting old XML file",
+      "successLogMessage": "Deleted old XML file"
+    },
+    {
+      "name": "move-old-eml-txt",
+      "type": "age",
+      "extensions": ["eml", "txt"],
+      "olderThanDays": 1,
+      "ageBy": "birthtime",
+      "action": "move",
+      "targetFolderKey": "backup",
+      "errorLogMessage": "Failed moving old EML/TXT file",
+      "successLogMessage": "Moved old EML/TXT file"
+    }
+  ],
+  "backupRules": [
+    {
+      "name": "delete-old-backup-files",
+      "type": "age",
+      "extensions": ["*"],
+      "olderThanDays": 7,
+      "ageBy": "birthtime",
+      "action": "delete",
+      "errorLogMessage": "Failed deleting old backup file",
+      "successLogMessage": "Deleted old backup file"
+    }
+  ]
+}

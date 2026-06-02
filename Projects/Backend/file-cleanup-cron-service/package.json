@@ -1,0 +1,16 @@
+{
+  "name": "file-cleanup-cron-service",
+  "version": "1.0.0",
+  "description": "Configurable Node.js cron service for automated file cleanup and backup-folder maintenance.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "LOG_LEVEL=debug node index.js"
+  },
+  "dependencies": {
+    "node-cron": "^3.0.3",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}
