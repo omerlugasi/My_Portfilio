@@ -43,7 +43,7 @@ Implemented components:
 ## Repository Structure
 
 ```text id="v6qfdm"
-deep-learning-hw2/
+hw2/
 │
 ├── README.md
 ├── requirements.txt
