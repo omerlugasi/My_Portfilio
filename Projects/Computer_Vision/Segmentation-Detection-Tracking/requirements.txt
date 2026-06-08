@@ -1,0 +1,17 @@
+torch
+torchvision
+opencv-python
+numpy
+pandas
+Pillow
+requests
+
+ultralytics
+
+matplotlib
+scikit-image
+
+segment-anything
+
+jupyter
+ipykernel
